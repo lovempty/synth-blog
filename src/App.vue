@@ -4,17 +4,23 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <Header />
-  <div class="container">
-    <router-view />
+  <div class="app">
+    <Header />
+    <div class="container">
+      <router-view />
+    </div>
+    <Footer />
   </div>
-  <Footer />
 </template>
 
 <style lang="scss" scoped>
-.container {
-  background-color: $background-color;
-  width: 100vw;
-  height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
+.app {
+  font-family: "Caladea", serif;
+  .container {
+    background-color: $background-color;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 </style>

@@ -9,11 +9,18 @@ const count = ref(0);
 </script>
 
 <template>
-  <div class="Header">Header</div>
+  <div class="Header">
+    <div class="logo">
+      <img src="@/assets/images/logo.svg" alt="logo" />
+    </div>
+    <div class="info"></div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .Header {
-  display: none;
+  .logo {
+    font-weight: bold;
+  }
 }
 </style>
