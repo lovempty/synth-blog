@@ -16,11 +16,10 @@ import Footer from "./components/Footer.vue";
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
 .app {
+  padding: 25px;
   font-family: "Caladea", serif;
-  .container {
-    background-color: $background-color;
-    width: 100vw;
-    height: 100vh;
-  }
+  background-color: $background-color;
+  width: 100vw;
+  height: 100vh;
 }
 </style>
