@@ -1,7 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Caladea&family=Sahitya:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caladea&family=Sahitya&display=swap");
 // Main color
 $background-color: #fadcdc;
 
 // Common class
 .w-100 {
   width: 100%;
+}
+
+.head-1 {
+  font-family: "Sahitya", serif;
+  font-weight: 700;
+  font-size: 21px;
+}
+.head-2 {
+  font-size: 25px;
+}
+.head-3 {
+  font-family: "Sahitya", serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.note-1 {
+  font-family: "Sahitya", serif;
+  font-size: 13px;
+  color: gray;
+}
+
+// margin
+.mt-1 {
+  margin-top: 5em;
+}
+.mt-2 {
+  margin-top: 10em;
+}
+.mt-3 {
+  margin-top: 15em;
+}
+.mt-4 {
+  margin-top: 20em;
+}
+.mt-5 {
+  margin-top: 25em;
+}
+
+// flexbox
+.flex {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
 }

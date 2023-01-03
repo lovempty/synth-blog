@@ -1,24 +1,16 @@
 <script setup>
-import { ref } from "vue";
 import InputSearch from "./InputSearch.vue";
 
 const inARowStyle = "is-flex is-flex-direction-row is-align-items-center ";
-const visible = ref(true);
-const onClickSearch = () => {
-  visible.value = false;
-};
 </script>
 
 <template>
   <div :class="`Header ${inARowStyle} is-justify-content-space-between w-100`">
-    <div
-      :class="`logo ${inARowStyle} ${visible ? '' : 'invisible'}`"
-      style="width: 100%"
-    >
-      <img src="@/assets/images/logo.svg" alt="logo" />
+    <div :class="`logo ${inARowStyle}`">
+      <img src="@/assets/images/logo.svg" alt="logo" style="width: 100%" />
     </div>
     <div :class="`info ${inARowStyle} w-100`">
-      <InputSearch @onClickSearch="onClickSearch" />
+      <InputSearch />
       <img src="@/assets/images/noti.svg" alt="logo" />
       <img src="@/assets/images/profile.svg" alt="logo" />
     </div>
@@ -29,6 +21,10 @@ const onClickSearch = () => {
 .Header {
   .logo {
     font-weight: bold;
+    img {
+      transition: display 0.5s linear;
+      -webkit-transition: display 0.5s linear;
+    }
   }
   .invisible {
     display: none !important;

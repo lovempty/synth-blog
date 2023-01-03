@@ -1,10 +1,10 @@
 import { createWebHistory, createRouter } from "vue-router";
-import HomeScreen from "@/views/HomeScreen.vue";
+import HomeScreen from "@/views/home/index.vue";
 
 const routes = [
   {
     path: "/",
-    name: "HomeScreen",
+    name: "home-screen",
     component: HomeScreen,
   },
 ];

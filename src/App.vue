@@ -4,6 +4,7 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
+  <div class="background"></div>
   <div class="app">
     <Header />
     <div class="container">
@@ -14,12 +15,21 @@ import Footer from "./components/Footer.vue";
 </template>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
 .app {
   padding: 25px;
   font-family: "Caladea", serif;
-  background-color: $background-color;
   width: 100vw;
   height: 100vh;
+  color: black;
+  font-size: 13px;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+  z-index: -1;
 }
 </style>

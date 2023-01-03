@@ -1,11 +1,6 @@
 <script setup>
-import { ref } from "vue";
-
 const emit = defineEmits(["onClickSearch"]);
-const visible = ref(false);
-
 const onClickSearch = () => {
-  visible.value = true;
   emit("onClickSearch");
 };
 </script>
@@ -13,37 +8,32 @@ const onClickSearch = () => {
   <div
     class="InputSearch is-flex is-flex-direction-row-reverse is-align-items-center w-100"
   >
-    <input
-      type="text"
-      :class="visible ? 'visible' : 'invisible'"
-      class="w-100"
-    />
-    <img
-      src="@/assets/images/search.svg"
-      alt="logo"
-      class="icon-search"
-      @click="onClickSearch"
-    />
+    <input type="text" id="inputSearch" @click="onClickSearch" />
   </div>
 </template>
 <style lang="scss">
 .InputSearch {
   position: relative;
   input {
+    background: url("@/assets/images/search.svg");
+    background-repeat: no-repeat;
+    background-position: right 5px top 8px;
+    padding-left: 20px;
     padding-right: 30px;
     height: 44px;
-    width: 40%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 32px;
+    width: 22%;
     border: none;
-    background-color: #f0f0f0;
-    transition: width 0.5s ease-out;
-  }
-  .visible {
-    width: 100%;
-  }
-  .invisible {
-    opacity: 0;
+    border-radius: 32px;
+    transition: width 0.4s ease-in-out, background 0.4s ease-out;
+    -webkit-transition: width 0.4s ease-in-out, background 0.4s ease-out;
+    &:focus {
+      outline: none;
+      width: 187%;
+      background-color: #f0f0f0;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 32px;
+    }
+    position: absolute;
   }
   .icon-search {
     position: absolute;
